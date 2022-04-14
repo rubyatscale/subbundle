@@ -32,7 +32,7 @@ module Subbundle
     subbundle_lockfile_path.write(Bundler.ui.silence { definition.to_lock })
 
     # Delete old caches.
-    Bundler.app_config_path.glob("subbundles/rubocop.*.lock").each do |path|
+    Bundler.app_config_path.glob("subbundles/#{name}.*.lock").each do |path|
       path.delete if path != subbundle_lockfile_path
     end
 
