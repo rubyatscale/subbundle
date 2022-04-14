@@ -31,6 +31,11 @@ module Subbundle
     subbundle_lockfile_path.dirname.mkpath
     subbundle_lockfile_path.write(Bundler.ui.silence { definition.to_lock })
 
+    # Delete old caches.
+    Bundler.app_config_path.glob("subbundles/rubocop.*.lock").each do |path|
+      path.delete if path != subbundle_lockfile_path
+    end
+
     setup_from_subbundle(gems, subbundle_lockfile_path)
   end
 
