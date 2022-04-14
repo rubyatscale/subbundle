@@ -65,6 +65,9 @@ module Subbundle
   end
 
   def self.setup_runtime(definition)
-    Bundler.ui.silence { Bundler::Runtime.new(Bundler.root, definition).setup }
+    runtime = Bundler::Runtime.new(Bundler.root, definition)
+    # This is not ideal, let's revisit later.
+    Bundler.instance_variable_set(:@load, runtime)
+    Bundler.ui.silence { runtime.setup }
   end
 end
