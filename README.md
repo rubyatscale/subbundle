@@ -60,7 +60,7 @@ Subbundle.setup(*%w(
 load Gem.bin_path("rubocop", "rubocop")
 ```
 
-# Anecdotal Benchmarks
+## Anecdotal Benchmarks
 
 In a project with ~600 gems...
 
