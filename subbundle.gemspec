@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["ngan@users.noreply.github.com"]
 
   spec.summary = "Creates a subbundle from your project's bundle."
-  spec.homepage = "https://github.com/bigrails/subbundle"
+  spec.homepage = "https://github.com/rubyatscale/subbundle"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
