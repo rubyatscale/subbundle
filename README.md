@@ -1,5 +1,7 @@
 # Subbundle
 
+# This gem is deprecated - See https://github.com/rubyatscale/subbundle/issues/2#issuecomment-1198576266
+
 Subbundle allows you to boot and require specific gems from your main gem bundle. This can
 help if you have a very large number of gems in your `Gemfile.lock` and it takes 1+ seconds
 to boot your bundle. This is especially useful for binstubs where you can simply load the
